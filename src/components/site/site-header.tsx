@@ -36,11 +36,14 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`transition-opacity ${
-                  isActive ? "opacity-100" : "opacity-70 hover:opacity-100"
+                className={`relative transition-opacity ${
+                  isActive ? "text-sky-600 dark:text-sky-400" : "opacity-70 hover:opacity-100"
                 }`}
               >
                 {item.label}
+                {isActive && (
+                  <span className="absolute -bottom-2 left-1/2 h-1 w-6 -translate-x-1/2 rounded-full bg-sky-500/70 shadow-sm dark:bg-sky-400/80" />
+                )}
               </Link>
             );
           })}

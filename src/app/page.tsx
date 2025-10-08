@@ -70,7 +70,7 @@ export default function HomePage() {
     {
       title: "What teams say",
       body:
-        "I turn ambiguous problems into shipped systems—balancing architecture, data quality, and stakeholder context.",
+        "I'm proactive and reliable, I bring structure, clarity, and drive to every project.",
     },
     {
       title: "How I work",

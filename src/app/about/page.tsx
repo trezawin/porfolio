@@ -12,6 +12,9 @@ export default function AboutPage() {
         <p className="mt-3 text-neutral-600 dark:text-neutral-300">
           Snapshot of what I value, how I work, and the tools I lean on day to day.
         </p>
+        <p className="mt-6 text-sm leading-relaxed text-neutral-700 dark:text-neutral-300 md:text-base">
+          I'm someone who loves solving problems whether it's debugging code, refining data models, or finding a smarter way to do things. I started my career in software engineering, where I learned the value of clean systems and clear thinking. Over time, my curiosity for data grew into a passion for AI and machine learning. I'm proactive, result-driven, and value clarity and discipline in how I work. Outside of tech, I enjoy learning languages, exploring cities, and finding small ways to make things more efficient both in code and in life.
+        </p>
       </header>
 
       {PROFILE.languages && PROFILE.languages.length > 0 && (
@@ -20,12 +23,9 @@ export default function AboutPage() {
             <Globe className="h-4 w-4" />
             <h2 className="text-xl font-semibold tracking-tight">Languages</h2>
           </div>
-          <ul className="mt-4 flex flex-wrap gap-3 text-sm text-neutral-600 dark:text-neutral-300">
+          <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-neutral-600 dark:text-neutral-300">
             {PROFILE.languages.map((language) => (
-              <li
-                key={language.name}
-                className="rounded-lg border border-neutral-200 px-3 py-1 dark:border-neutral-700"
-              >
+              <li key={language.name}>
                 {language.name} · {language.level}
               </li>
             ))}
@@ -61,7 +61,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mt-12 border-t pt-10 text-sm text-neutral-500 dark:text-neutral-400">
+      <section className="mt-12 border-t pt-10 text-m text-neutral-500 dark:text-neutral-400">
         <p>
           Want a deeper dive? I can walk through architecture decisions, product outcomes, or share additional case studies on request.
         </p>

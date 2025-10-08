@@ -140,13 +140,15 @@ export const PROJECTS = [
       "Hybrid LLM + static analysis workflow to audit RWA contracts and align with Hong Kong compliance; dataset prep and evaluation pipelines for model benchmarking.",
     tags: ["LLMs", "Static Analysis", "Python", "Smart Contract", "Node.js", "TypeScript"],
     url: "https://github.com/trezawin/smartContract_ERC3643_staticAnalysis",
+    accent: "#6366f1",
   },
   {
     title: "Winning the Space Race with Data Science",
     blurb:
       "Satellite launch analytics project exploring NASA, SpaceX, and ISRO missions with end-to-end data preparation, visualization, and insights.",
-    tags: ["Python", "EDA", "Plotly Dash", "Folium", "Jupyter", "Machine Learning"],
+    tags: ["Predictive analysis", "Python", "EDA", "Plotly Dash", "Folium", "Machine Learning", "Jupyter"],
     url: "https://github.com/trezawin/Winning-space-race-with-data-science",
+    accent: "#0ea5e9",
   },
   {
     title: "TripAdvisor Restaurant Text Mining",
@@ -154,24 +156,28 @@ export const PROJECTS = [
       "Natural language processing pipeline for TripAdvisor reviews to uncover cuisine trends, sentiments, and city-level dining insights.",
     tags: ["NLP", "Python", "EDA"],
     url: "https://github.com/trezawin/NLP-TextMining_TripAdvisor-RestaurantExploration",
+    accent: "#f59e0b",
   },
   {
     title: "Multi-Airports Message Center",
     blurb:
       "High traffic and multi-airports message management application with analytics to optimize flows and instant airport switching.",
     tags: ["Java Spring", "Analytics", "Scrum", "Architecture Design"],
+    accent: "#10b981",
   },
   {
     title: "Security Scanning Tooling",
     blurb:
       "Led Blackduck & Fortify tooling to resolve security/compliance issues and cut license risk by >50%.",
     tags: ["Security", "DevEx", "Leadership", "Blackduck", "Fortify", "Jira", "Confluence"],
+    accent: "#ef4444",
   },
   {
     title: "Airport Resource Optimization",
     blurb:
       "Drools rule engine and optimization for airport resources, aligning operations to business KPIs.",
     tags: ["Java Spring", "Drools", "Optimization", "OptaPlanner", "ActiveMQ", "SQL", "REST APIs", "Oracle DB", "Scrum", "Bitbucket", "Jira"],
+    accent: "#8b5cf6",
   },
 ];
 
