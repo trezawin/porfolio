@@ -13,7 +13,7 @@ export default function AboutPage() {
           Snapshot of what I value, how I work, and the tools I lean on day to day.
         </p>
         <p className="mt-6 text-sm leading-relaxed text-neutral-700 dark:text-neutral-300 md:text-base">
-          I'm someone who loves solving problems whether it's debugging code, refining data models, or finding a smarter way to do things. I started my career in software engineering, where I learned the value of clean systems and clear thinking. Over time, my curiosity for data grew into a passion for AI and machine learning. I'm proactive, result-driven, and value clarity and discipline in how I work. Outside of tech, I enjoy learning languages, exploring cities, and finding small ways to make things more efficient both in code and in life.
+          I&apos;m someone who loves solving problems whether it&apos;s debugging code, refining data models, or finding a smarter way to do things. I started my career in software engineering, where I learned the value of clean systems and clear thinking. Over time, my curiosity for data grew into a passion for AI and machine learning. I&apos;m proactive, result-driven, and value clarity and discipline in how I work. Outside of tech, I enjoy learning languages, exploring cities, and finding small ways to make things more efficient both in code and in life.
         </p>
       </header>
 
