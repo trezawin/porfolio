@@ -103,29 +103,66 @@ export default function ProjectsPage() {
                 <p className="text-sm text-neutral-600 dark:text-neutral-300">
                   {project.blurb}
                 </p>
-                <ul className="flex flex-wrap gap-3">
-                  {project.tags.map((tag, index) => {
-                    const color = getTagColor(
-                      accent,
-                      index,
-                      project.tags.length
-                    );
-                    return (
-                      <li key={tag}>
-                        <span
-                          className="inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium shadow-sm transition hover:-translate-y-0.5"
-                          style={{
-                            backgroundColor: color.background,
-                            color: color.foreground,
-                            borderColor: color.border,
-                          }}
-                        >
-                          {tag}
-                        </span>
-                      </li>
-                    );
-                  })}
-                </ul>
+                {Array.isArray(project.tags) && project.tags.length > 0 && (
+                  <ul className="flex flex-wrap gap-3">
+                    {project.tags.map((tag, index) => {
+                      const color = getTagColor(
+                        accent,
+                        index,
+                        project.tags.length
+                      );
+                      return (
+                        <li key={tag}>
+                          <span
+                            className="inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium shadow-sm transition hover:-translate-y-0.5"
+                            style={{
+                              backgroundColor: color.background,
+                              color: color.foreground,
+                              borderColor: color.border,
+                            }}
+                          >
+                            {tag}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+                {[
+                  { title: "Skills demonstrated", items: project.skills },
+                  { title: "Tools used", items: project.tools },
+                ]
+                  .filter((section) => Array.isArray(section.items) && section.items.length > 0)
+                  .map((section) => (
+                    <div key={section.title} className="space-y-2">
+                      <h3 className="text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+                        {section.title}
+                      </h3>
+                      <ul className="flex flex-wrap gap-3">
+                        {section.items!.map((item, index) => {
+                          const color = getTagColor(
+                            accent,
+                            index,
+                            section.items!.length
+                          );
+                          return (
+                            <li key={`${section.title}-${item}`}>
+                              <span
+                                className="inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium shadow-sm transition hover:-translate-y-0.5"
+                                style={{
+                                  backgroundColor: color.background,
+                                  color: color.foreground,
+                                  borderColor: color.border,
+                                }}
+                              >
+                                {item}
+                              </span>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  ))}
               </div>
             </li>
           );
