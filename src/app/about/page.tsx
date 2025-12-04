@@ -7,13 +7,13 @@ export default function AboutPage() {
     <div className="mx-auto max-w-5xl px-4 py-16 md:py-20">
       <header className="mb-12 md:mb-16">
         <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
-          About
+          A little about me
         </h1>
-        <p className="mt-3 text-neutral-600 dark:text-neutral-300">
+        {/* <p className="mt-3 text-neutral-600 dark:text-neutral-300">
           Snapshot of what I value, how I work, and the tools I lean on day to day.
-        </p>
+        </p> */}
         <p className="mt-6 text-sm leading-relaxed text-neutral-700 dark:text-neutral-300 md:text-base">
-          I&apos;m someone who loves solving problems whether it&apos;s debugging code, refining data models, or finding a smarter way to do things. I started my career in software engineering, where I learned the value of clean systems and clear thinking. Over time, my curiosity for data grew into a passion for AI and machine learning. I&apos;m proactive, result-driven, and value clarity and discipline in how I work. Outside of tech, I enjoy learning languages, exploring cities, and finding small ways to make things more efficient both in code and in life.
+          I love solving problems whether it&apos;s debugging code, refining data models, or finding a smarter way to do things. I started my career in software engineering, where I learned the value of clean systems and clear thinking. Over time, my curiosity for data grew into a passion for AI and machine learning. I&apos;m proactive, result-driven, and value clarity and discipline in how I work. Outside of tech, I enjoy learning new things, knitting, doing bodycombat, and finding small ways to make things more efficient both in code and in life.
         </p>
       </header>
 

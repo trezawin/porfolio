@@ -4,9 +4,10 @@ export const PROFILE = {
   name: "Treza Bawm Win",
   location: "Paris, France",
   email: "treza.win@gmail.com",
-  blurb: `Hi, 
-I'm an AI and data science enthusiast who loves turning ideas into real, useful intelligent systems. After more than a decade building travel-tech solutions at Amadeus, I decided to deepen my data skills through an M.Sc. in Big Data & Business Analytics at ESCP. 
-These days, I'm exploring how AI and large language models can make technology smarter and more trustworthy like building LLM-powered tools for smart-contract auditing. I'm always curious, learning, and excited about what data can do next.`,
+  blurb: `Hi there!
+I'm an engineer; data and AI enthusiast who loves turning ideas into real-world substainable intelligent systems. After more than a decade building travel-tech solutions at Amadeus Airport IT, in 2024 I decided to deepen my data and analytics skills at ESCP Paris. 
+These days I'm exploring how data and AI can make technology smarter and more trustworthy like building LLM-powered tools for digital finance auditing. 
+I'm always curious, learning, and excited about what data can do next.`,
   introHighlights: [],
   languages: [
     { name: "English", level: "C1" },
@@ -87,9 +88,10 @@ export const EXPERIENCE = [
     summary:
       "Applying LLMs with static analysis to support smart-contract auditing and compliance for real-world-asset (RWA) contracts.",
     details: [
-      "Designed a hybrid LLMs + rule-based pipeline to flag risky clauses and map to Hong Kong compliance controls.",
-      "Built reproducible benchmarking with dataset curation, prompts, and evaluation metrics (precision/recall/F1).",
-      "Prototyped Python services (FastAPI) and orchestration scripts for batch audits over contract repositories.",
+      "Applied LLMs to support compliance auditing of smart contracts in regulated finance.",
+      "Designed and implemented a hybrid AI framework for auditing contracts and built evaluation pipelines and benchmarked LLM-generated outputs against expert-reviewed compliance rules.",
+      "Developed a RAG solution to enhance the accuracy and coverage of rule extraction from legal texts.",
+      "Supported research for a Master’s thesis on AI-augmented auditing in tokenized finance.",
     ],
   },
   {
@@ -134,6 +136,14 @@ export const EXPERIENCE = [
 ];
 
 export const PROJECTS = [
+  {
+    title: "Compliance Rule Author RAG",
+    blurb:
+      "RAG pipeline to extract enforceable obligations from HKMA AMLO (Cap. 615) and align them to ERC-3643 concepts; hybrid retrieval, prompt assembly, and an API for rule authoring.",
+    tags: ["RAG", "LLMs", "Python", "FastAPI", "BM25", "OpenAI"],
+    url: "https://github.com/trezawin/ComplianceRuleAuthor-RAG",
+    accent: "#22c55e",
+  },
   {
     title: "AI Augmented Smart-Contract Audit",
     blurb:

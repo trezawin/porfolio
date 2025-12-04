@@ -65,7 +65,7 @@ export default function HomePage() {
     {
       title: "Current focus",
       body:
-        "Pairing LLMs with static analysis to make smart-contract compliance faster, safer, and more explainable.",
+        "Building RAG solution for auditing regulatory compliance in digital finance; the blockchain tech. Refers to below featured work for more info. \nAnd to enjoy small little things.",
     },
     {
       title: "What teams say",
@@ -210,7 +210,7 @@ export default function HomePage() {
             <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">
               {card.title}
             </h2>
-            <p className="mt-3 text-sm text-neutral-700 dark:text-neutral-300">
+            <p className="mt-3 whitespace-pre-line text-sm text-neutral-700 dark:text-neutral-300">
               {card.body}
             </p>
           </div>
