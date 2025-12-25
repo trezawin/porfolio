@@ -5,7 +5,7 @@ export default function EducationPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
       <header className="mb-10 md:mb-14">
-        <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
+        <h1 className="font-heading text-3xl tracking-tight md:text-4xl">
           Education
         </h1>
         <p className="mt-3 text-neutral-600 dark:text-neutral-300">

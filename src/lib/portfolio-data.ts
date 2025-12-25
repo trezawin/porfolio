@@ -4,7 +4,7 @@ export const PROFILE = {
   name: "Treza Bawm Win",
   location: "Paris, France",
   email: "treza.win@gmail.com",
-  blurb: `Hi there!
+  blurb: `Hi there !
 I'm an engineer; data and AI enthusiast who loves turning ideas into real-world substainable intelligent systems. After more than a decade building travel-tech solutions at Amadeus Airport IT, in 2024 I decided to deepen my data and analytics skills at ESCP Paris. 
 These days I'm exploring how data and AI can make technology smarter and more trustworthy like building LLM-powered tools for digital finance auditing. 
 I'm always curious, learning, and excited about what data can do next.`,
@@ -141,6 +141,12 @@ export const PROJECTS = [
     title: "Compliance Rule Author RAG",
     blurb:
       "RAG pipeline to extract enforceable obligations from HKMA AMLO (Cap. 615) and align them to ERC-3643 concepts; hybrid retrieval, prompt assembly, and an API for rule authoring.",
+    problem:
+      "Legal and compliance teams need a systematic way to turn dense regulation (HKMA AMLO) into machine-readable rules that can be applied to ERC-3643 token contracts.",
+    solution:
+      "Designed a RAG pipeline that segments legal text, retrieves relevant passages, and assembles prompts so LLMs can propose candidate rules aligned with ERC-3643 entities and events.",
+    impact:
+      "Reduces manual effort required for first-draft rule authoring and creates a reproducible path from regulation text to compliance checks.",
     tags: ["RAG", "LLMs", "Python", "FastAPI", "BM25", "OpenAI"],
     url: "https://github.com/trezawin/ComplianceRuleAuthor-RAG",
     accent: "#22c55e",
@@ -149,6 +155,12 @@ export const PROJECTS = [
     title: "AI Augmented Smart-Contract Audit",
     blurb:
       "Hybrid LLM + static analysis workflow to audit RWA contracts and align with Hong Kong compliance; dataset prep and evaluation pipelines for model benchmarking.",
+    problem:
+      "Auditing real-world-asset (RWA) smart contracts against local regulations is slow and error-prone when done purely manually.",
+    solution:
+      "Combined static analysis with LLM-based reasoning and a curated dataset to highlight potential non-compliance and support auditors with explainable findings.",
+    impact:
+      "Improves coverage and consistency of contract reviews and supports a research thesis on AI-augmented auditing.",
     tags: ["LLMs", "Static Analysis", "Python", "Smart Contract", "Node.js", "TypeScript"],
     url: "https://github.com/trezawin/smartContract_ERC3643_staticAnalysis",
     accent: "#6366f1",
@@ -157,6 +169,12 @@ export const PROJECTS = [
     title: "Winning the Space Race with Data Science",
     blurb:
       "Satellite launch analytics project exploring NASA, SpaceX, and ISRO missions with end-to-end data preparation, visualization, and insights.",
+    problem:
+      "Space-launch data is fragmented across sources, making it hard to compare agencies, launch vehicles, and mission success over time.",
+    solution:
+      "Consolidated data from multiple sources, engineered features, and built interactive plots to explore launch frequency, success rate, and geography.",
+    impact:
+      "Provides a data-driven narrative around how different players are evolving in the modern space race.",
     tags: [],
     skills: [
       "Web Scraping",
@@ -188,6 +206,12 @@ export const PROJECTS = [
     title: "TripAdvisor Restaurant Text Mining",
     blurb:
       "Natural language processing pipeline for TripAdvisor reviews to uncover cuisine trends, sentiments, and city-level dining insights.",
+    problem:
+      "Travelers and restaurant owners lack an aggregated view of dining trends and customer sentiment across a city.",
+    solution:
+      "Scraped and cleaned TripAdvisor reviews, applied NLP techniques for topic discovery and sentiment analysis, and visualized results by cuisine and location.",
+    impact:
+      "Surfaces actionable insights on what diners care about most, helping prioritize improvements and marketing messages.",
     tags: ["NLP", "Python", "EDA"],
     url: "https://github.com/trezawin/NLP-TextMining_TripAdvisor-RestaurantExploration",
     accent: "#f59e0b",
@@ -196,6 +220,12 @@ export const PROJECTS = [
     title: "Multi-Airports Message Center",
     blurb:
       "High traffic and multi-airports message management application with analytics to optimize flows and instant airport switching.",
+    problem:
+      "Airports and airlines need reliable, low-latency messaging to coordinate operations across multiple airports, with high resilience to failures.",
+    solution:
+      "Contributed to backend services and analytics that route, monitor, and analyze high-volume operational messages with multi-airport awareness.",
+    impact:
+      "Improved observability and flexibility of airport operations, enabling faster incident response and smoother scaling to new airports.",
     tags: ["Java Spring", "Analytics", "Scrum", "Architecture Design"],
     accent: "#10b981",
   },
@@ -203,6 +233,12 @@ export const PROJECTS = [
     title: "Security Scanning Tooling",
     blurb:
       "Led Blackduck & Fortify tooling to resolve security/compliance issues and cut license risk by >50%.",
+    problem:
+      "Legacy products accumulated open-source and security risks that were not systematically tracked or remediated.",
+    solution:
+      "Rolled out and integrated Blackduck and Fortify scanning into the CI pipeline, defined remediation plans, and coordinated with teams to fix findings.",
+    impact:
+      "Cut license and security risk by more than half and established an ongoing process for keeping products compliant.",
     tags: ["Security", "DevEx", "Leadership", "Blackduck", "Fortify", "Jira", "Confluence"],
     accent: "#ef4444",
   },
@@ -210,6 +246,12 @@ export const PROJECTS = [
     title: "Airport Resource Optimization",
     blurb:
       "Drools rule engine and optimization for airport resources, aligning operations to business KPIs.",
+    problem:
+      "Airports must allocate limited gates and resources to flights while balancing cost, SLAs, and operational constraints.",
+    solution:
+      "Implemented Drools-based business rules and optimization logic using OptaPlanner to simulate and choose better allocation plans.",
+    impact:
+      "Helped operations teams reason about trade-offs and improve terminal and gate utilisation against defined KPIs.",
     tags: ["Java Spring", "Drools", "Optimization", "OptaPlanner", "ActiveMQ", "SQL", "REST APIs", "Oracle DB", "Scrum", "Bitbucket", "Jira"],
     accent: "#8b5cf6",
   },
@@ -218,7 +260,7 @@ export const PROJECTS = [
 export const EDUCATION = [
   {
     school: "ESCP Business School",
-    degree: "M.Sc. in Big Data & Business Analytics",
+    degree: "M.Sc. in Big Data & Business Analytics - GPA 3.7/4",
     period: "Oct 2024 — Jun 2025",
     location: "Paris, France/Berlin, Germany",
     details: [
@@ -239,7 +281,7 @@ export const EDUCATION = [
   },
   {
     school: "National University of Singapore — Institute of Systems Science",
-    degree: "Graduate Diploma in Systems Analysis",
+    degree: "Graduate Diploma in Systems Analysis - GPA 4.5/5",
     period: "2011 — 2012",
     location: "Singapore",
     details: [

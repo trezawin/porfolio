@@ -149,9 +149,9 @@ export default function HomePage() {
           <span className="inline-flex items-center gap-2 rounded-full border border-neutral-200 px-3 py-1 text-xs font-medium text-neutral-600 dark:border-neutral-700 dark:text-neutral-300">
             <MapPin className="h-3.5 w-3.5" /> {PROFILE.location}
           </span>
-          <div className="mt-6 max-w-2xl space-y-4 text-neutral-600 dark:text-neutral-300">
-            <h1 className="text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 md:text-2xl">
-              Hi,
+          <div className="mt-6 max-w-2xl space-y-4 text-sm text-neutral-600 dark:text-neutral-300 md:text-base">
+            <h1 className="font-heading text-base tracking-tight text-neutral-900 dark:text-neutral-100 md:text-lg">
+              Hi there!
             </h1>
             {restLines.map((line) => (
               <p key={line}>{line}</p>
@@ -207,7 +207,7 @@ export default function HomePage() {
             key={card.title}
             className="rounded-3xl border bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950"
           >
-            <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">
+            <h2 className="font-heading text-sm uppercase tracking-[0.2em] text-neutral-700 dark:text-neutral-300">
               {card.title}
             </h2>
             <p className="mt-3 whitespace-pre-line text-sm text-neutral-700 dark:text-neutral-300">
@@ -220,7 +220,7 @@ export default function HomePage() {
       <section className="mt-16 border-t pt-12">
         <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
+            <h2 className="font-heading text-2xl tracking-tight text-neutral-900 dark:text-neutral-100">
               Featured work
             </h2>
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
@@ -239,7 +239,7 @@ export default function HomePage() {
               key={project.title}
               className="rounded-3xl border bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-950"
             >
-              <h3 className="text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
+              <h3 className="font-heading text-lg tracking-tight text-neutral-900 dark:text-neutral-100">
                 {project.title}
               </h3>
               <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-300">

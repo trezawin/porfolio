@@ -1,14 +1,65 @@
-import { Globe } from "lucide-react";
+'use client';
+
+import { Globe, Music } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { PROFILE, SKILL_GROUPS } from "@/lib/portfolio-data";
 
 export default function AboutPage() {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.loop = true;
+    // Try to auto-play when the page loads; some browsers may still block this.
+    audio
+      .play()
+      .then(() => {
+        setIsPlaying(true);
+      })
+      .catch(() => {
+        // Autoplay was likely blocked; user can start playback with the button.
+        setIsPlaying(false);
+      });
+  }, []);
+
+  const toggleMusic = async () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    try {
+      if (audio.paused) {
+        await audio.play();
+        setIsPlaying(true);
+      } else {
+        audio.pause();
+        setIsPlaying(false);
+      }
+    } catch (error) {
+      // Ignore autoplay errors; user can try again.
+      console.error("Audio playback error", error);
+    }
+  };
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-16 md:py-20">
       <header className="mb-12 md:mb-16">
-        <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
-          A little about me
-        </h1>
+        <div className="flex items-center justify-between gap-4">
+          <h1 className="font-heading text-3xl tracking-tight md:text-4xl">
+            A little about me
+          </h1>
+          <button
+            type="button"
+            onClick={toggleMusic}
+            className="inline-flex items-center gap-2 rounded-full border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-700 shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-400 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:border-neutral-500 dark:hover:bg-neutral-900/60"
+          >
+            <Music className="h-3.5 w-3.5" />
+            {isPlaying ? "Pause vibe" : "Play techno vibe"}
+          </button>
+          <audio ref={audioRef} src="/techno-loop.mp3" />
+        </div>
         {/* <p className="mt-3 text-neutral-600 dark:text-neutral-300">
           Snapshot of what I value, how I work, and the tools I lean on day to day.
         </p> */}
@@ -21,7 +72,7 @@ export default function AboutPage() {
         <section className="mt-12">
           <div className="flex items-center gap-2 text-neutral-800 dark:text-neutral-200">
             <Globe className="h-4 w-4" />
-            <h2 className="text-xl font-semibold tracking-tight">Languages</h2>
+            <h2 className="font-heading text-xl tracking-tight">Languages</h2>
           </div>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-neutral-600 dark:text-neutral-300">
             {PROFILE.languages.map((language) => (
@@ -34,7 +85,7 @@ export default function AboutPage() {
       )}
 
       <section className="mt-12 border-t pt-10">
-        <h2 className="text-xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
+        <h2 className="font-heading text-xl tracking-tight text-neutral-900 dark:text-neutral-100">
           Core toolkit
         </h2>
         <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">

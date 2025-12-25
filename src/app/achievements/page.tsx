@@ -17,26 +17,25 @@ export default function AchievementsPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
       <header className="mb-12 md:mb-16">
-        <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
-          Certifications & Achievements
-        </h1>
-        <p className="mt-3 max-w-prose text-neutral-600 dark:text-neutral-300">
+      <div className="flex items-center gap-3">
+          <Award className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+          <h2 className="font-heading text-2xl tracking-tight">
+            Recent Certifications
+          </h2>
+        </div>
+        {/* <p className="mt-3 max-w-prose text-neutral-600 dark:text-neutral-300">
           Professional growth validated through formal credentials and real-world
           wins.
-        </p>
+        </p> */}
       </header>
 
       <section>
-        <div className="flex items-center gap-3">
-          <Award className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
-          <h2 className="text-2xl font-semibold tracking-tight">
-            Certifications
-          </h2>
-        </div>
+
         <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
           Continuous learning across data science, analytics, and engineering
           practices.
         </p>
+        
         <div className="mt-6 grid gap-6 md:grid-cols-2">
           {certifications.map((cert) => (
             <div key={`${cert.title}-${cert.issued}`} className="border-l-4 border-fuchsia-400 pl-4 text-sm text-neutral-600 dark:text-neutral-300">
@@ -71,15 +70,14 @@ export default function AchievementsPage() {
 
       {achievements.length > 0 && (
         <section className="mt-16">
+          <br/><br/>
           <div className="flex items-center gap-3">
             <Trophy className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
-            <h2 className="text-2xl font-semibold tracking-tight">
-              Highlights
-            </h2>
-          </div>
-          <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
             Selected recognitions from hackathons and collaborative projects.
           </p>
+          </div>
+
           <ul className="mt-6 space-y-5">
             {achievements.map((achievement) => (
               <li

@@ -30,7 +30,7 @@ export default function ExperiencePage() {
         className="pointer-events-none absolute inset-x-6 top-32 -z-10 hidden h-[32rem] rounded-[3rem] bg-gradient-to-r from-fuchsia-200/40 via-sky-200/40 to-emerald-200/40 blur-3xl dark:from-fuchsia-500/10 dark:via-sky-500/10 dark:to-emerald-500/10 md:block"
       />
       <header className="mb-10 md:mb-14">
-        <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
+        <h1 className="font-heading text-3xl tracking-tight md:text-4xl">
           Experience
         </h1>
         {/* <p className="mt-3 max-w-prose text-neutral-600 dark:text-neutral-300">
