@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PROJECTS } from "@/lib/portfolio-data";
+import type { Project } from "@/lib/portfolio-data";
 
 function hexToRgb(hex: string) {
   const normalized = hex.replace("#", "");
@@ -62,7 +63,7 @@ export default function ProjectsPage() {
       </header>
 
       <ul className="relative ml-3 space-y-14 border-l border-neutral-200 pl-6 dark:border-neutral-800">
-        {PROJECTS.map((project) => {
+        {PROJECTS.map((project: Project) => {
           const accent = project.accent ?? "#0ea5e9";
 
           return (
@@ -103,23 +104,23 @@ export default function ProjectsPage() {
                 <p className="text-sm text-neutral-600 dark:text-neutral-300">
                   {project.blurb}
                 </p>
-                {["problem", "solution", "impact"].some(
-                  (field) => (project as any)[field]
+                {(["problem", "solution", "impact"] as const).some(
+                  (field) => project[field]
                 ) && (
                   <dl className="mt-3 grid gap-4 rounded-xl border border-neutral-200 bg-neutral-50 p-4 text-xs text-neutral-700 shadow-sm dark:border-neutral-800 dark:bg-neutral-900/40 dark:text-neutral-200 md:grid-cols-3">
-                    {[
+                    {([
                       { key: "problem", label: "Problem" },
                       { key: "solution", label: "Solution" },
                       { key: "impact", label: "Impact" },
-                    ]
-                      .filter(({ key }) => (project as any)[key])
+                    ] as const)
+                      .filter(({ key }) => project[key])
                       .map(({ key, label }) => (
                         <div key={key} className="space-y-1">
                           <dt className="font-bold uppercase tracking-wide text-[0.7rem] text-neutral-700 dark:text-neutral-200">
                             {label}
                           </dt>
                           <dd className="leading-relaxed">
-                            {(project as any)[key]}
+                            {project[key]}
                           </dd>
                         </div>
                       ))}

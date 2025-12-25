@@ -1,5 +1,18 @@
 import { Mail, Github, Linkedin } from "lucide-react";
 
+export type Project = {
+  title: string;
+  blurb: string;
+  tags?: string[];
+  url?: string;
+  accent?: string;
+  problem?: string;
+  solution?: string;
+  impact?: string;
+  skills?: string[];
+  tools?: string[];
+};
+
 export const PROFILE = {
   name: "Treza Bawm Win",
   location: "Paris, France",
@@ -136,7 +149,7 @@ export const EXPERIENCE = [
   },
 ];
 
-export const PROJECTS = [
+export const PROJECTS: Project[] = [
   {
     title: "Compliance Rule Author RAG",
     blurb:
