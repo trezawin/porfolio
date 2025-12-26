@@ -128,12 +128,8 @@ export default function ProjectsPage() {
                 )}
                 {Array.isArray(project.tags) && project.tags.length > 0 && (
                   <ul className="flex flex-wrap gap-3">
-                    {project.tags.map((tag, index) => {
-                      const color = getTagColor(
-                        accent,
-                        index,
-                        project.tags.length
-                      );
+                    {(project.tags ?? []).map((tag, index, tags) => {
+                      const color = getTagColor(accent, index, tags.length);
                       return (
                         <li key={tag}>
                           <span
