@@ -18,6 +18,7 @@ export const PROFILE = {
   location: "Paris, France",
   email: "treza.win@gmail.com",
   blurb: `Hi there !
+Welcome to my page.
 I'm an engineer; data and AI enthusiast who loves turning ideas into real-world substainable intelligent systems. After more than a decade building travel-tech solutions at Amadeus Airport IT, in 2024 I decided to deepen my data and analytics skills at ESCP Paris. 
 These days I'm exploring how data and AI can make technology smarter and more trustworthy like building LLM-powered tools for digital finance auditing. 
 I'm always curious, learning, and excited about what data can do next.`,

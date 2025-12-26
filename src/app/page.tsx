@@ -245,13 +245,18 @@ export default function HomePage() {
               <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-300">
                 {project.blurb}
               </p>
-              <div className="mt-4 flex flex-wrap gap-2 text-xs text-neutral-500 dark:text-neutral-400">
-                {project.tags.slice(0, 5).map((tag) => (
-                  <span key={tag} className="rounded-full border px-3 py-1 dark:border-neutral-700">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              {Array.isArray(project.tags) && project.tags.length > 0 && (
+                <div className="mt-4 flex flex-wrap gap-2 text-xs text-neutral-500 dark:text-neutral-400">
+                  {project.tags.slice(0, 5).map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border px-3 py-1 dark:border-neutral-700"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
               {project.url && (
                 <Link
                   href={project.url}
