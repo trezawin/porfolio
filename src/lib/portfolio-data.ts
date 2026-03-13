@@ -19,7 +19,7 @@ export const PROFILE = {
   email: "treza.win@gmail.com",
   blurb: `Hi there !
 Welcome to my page.
-I'm an engineer; data and AI enthusiast who loves turning ideas into real-world substainable intelligent systems. After more than a decade building travel-tech solutions at Amadeus Airport IT, in 2024 I decided to deepen my data and analytics skills at ESCP Paris. 
+I'm an engineer; data and AI enthusiast who loves turning ideas into substainable intelligent systems. After more than a decade building travel-tech solutions at Amadeus Airport IT, in 2024 I decided to deepen my data and analytics skills at ESCP Paris. 
 These days I'm exploring how data and AI can make technology smarter and more trustworthy like building LLM-powered tools for digital finance auditing. 
 I'm always curious, learning, and excited about what data can do next.`,
   introHighlights: [],
@@ -97,7 +97,7 @@ export const SKILL_GROUPS = [
 export const EXPERIENCE = [
   {
     company: "APM Creative Digital",
-    role: "AI Engineer Intern",
+    role: "AI Engineer",
     period: "Sep 2025 — Present",
     location: "Paris, France",
     summary:
@@ -120,6 +120,8 @@ export const EXPERIENCE = [
       "Delivered analytics to optimize high-volume airport message flows and enable instant airport switching.",
       "Drove Blackduck & Fortify remediation program, cutting license risk by >50% and reducing downtime by ~30%.",
       "Collaborated with cross-functional teams; created dashboards and runbooks to standardize incident response.",
+      "Supported customer acceptance testing on-site before production, provide ad-hoc solutions",
+      "Led maintenance team in supporting production and pre-production environments to prioritize troubleshooting to make sure the system stability across test and production environments."
     ],
   },
   {
@@ -133,6 +135,7 @@ export const EXPERIENCE = [
       "Implemented Drools rule engine to prioritize operations against airport SLAs and KPI thresholds.",
       "Developed services in Java with REST integrations; improved test coverage and CI reliability.",
       "Partnered with operations teams to validate rules against real-world scenarios and performance constraints.",
+      "Supported deployment on several production environments and took ownership on the incident supports."
     ],
   },
   {
@@ -144,7 +147,7 @@ export const EXPERIENCE = [
       "Delivered optimization and backend services for airport operations and supported UAT for major customers.",
     details: [
       "Built fixed-resource optimization using OptaPlanner; tuned constraints to balance throughput vs. cost.",
-      "Developed Java server-side apps with REST, JMS, ActiveMQ, and EJB across distributed environments.",
+      "Developed several Java server-side applications and interfaces with REST, JMS, ActiveMQ, and EJB across distributed environments.",
       "Supported UAT for Changi Airport; coordinated triage and defect resolutions with stakeholders.",
     ],
   },
@@ -161,7 +164,7 @@ export const PROJECTS: Project[] = [
       "Designed a RAG pipeline that segments legal text, retrieves relevant passages, and assembles prompts so LLMs can propose candidate rules aligned with ERC-3643 entities and events.",
     impact:
       "Reduces manual effort required for first-draft rule authoring and creates a reproducible path from regulation text to compliance checks.",
-    tags: ["RAG", "LLMs", "Python", "FastAPI", "BM25", "OpenAI"],
+    tags: ["RAG", "Prompt engineering", "LLMs", "Python", "FastAPI", "BM25", "OpenAI"],
     url: "https://github.com/trezawin/ComplianceRuleAuthor-RAG",
     accent: "#22c55e",
   },
