@@ -1,8 +1,10 @@
 import Link from "next/link";
-import { ExternalLink, Award, Trophy } from "lucide-react";
+import { ExternalLink, Award, Trophy, CalendarDays, Building2 } from "lucide-react";
 import { CERTIFICATIONS, ACHIEVEMENTS } from "@/lib/portfolio-data";
 
 export default function AchievementsPage() {
+  const certificationAccents = ["#16a34a", "#0ea5e9", "#f59e0b", "#ec4899", "#6366f1"];
+
   const certifications = [...CERTIFICATIONS].sort((a, b) => {
     const dateA = Date.parse(a.issued);
     const dateB = Date.parse(b.issued);
@@ -36,34 +38,40 @@ export default function AchievementsPage() {
           practices.
         </p>
         
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
-          {certifications.map((cert) => (
-            <div key={`${cert.title}-${cert.issued}`} className="border-l-4 border-fuchsia-400 pl-4 text-sm text-neutral-600 dark:text-neutral-300">
-              <p className="text-base font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
-                {cert.title}
-              </p>
-              <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
-                {cert.issuer}
-              </p>
-              <p className="mt-1 text-xs uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
-                Issued {cert.issued}
-              </p>
-              {cert.credentialId && (
-                <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
-                  Credential ID: {cert.credentialId}
+        <div className="mt-6 grid gap-3 md:grid-cols-2">
+          {certifications.map((cert, index) => (
+            <article
+              key={`${cert.title}-${cert.issued}`}
+              className="grid grid-cols-[8px_1fr_auto] items-center gap-3 rounded-2xl border bg-white px-3 py-2.5 text-sm text-neutral-600 shadow-sm dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-300"
+            >
+              <div
+                aria-hidden
+                className="h-9 w-2 rounded-full"
+                style={{ backgroundColor: certificationAccents[index % certificationAccents.length] }}
+              />
+              <div className="min-w-0">
+                <p className="truncate text-sm font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
+                  {cert.title}
                 </p>
-              )}
+                <p className="mt-0.5 inline-flex items-center gap-1.5 text-xs text-neutral-500 dark:text-neutral-400">
+                  <Building2 className="h-3.5 w-3.5 shrink-0" />
+                  <span className="truncate">{cert.issuer}</span>
+                  <span className="text-neutral-400">|</span>
+                  <CalendarDays className="h-3.5 w-3.5 shrink-0" />
+                  <span>{cert.issued}</span>
+                </p>
+              </div>
               {cert.credentialUrl && (
                 <Link
                   href={cert.credentialUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-2 inline-flex items-center gap-1 text-xs underline underline-offset-4 opacity-80 transition hover:opacity-100"
+                  className="inline-flex shrink-0 items-center gap-1 rounded-full border border-neutral-300 px-2 py-1 text-[11px] font-medium text-neutral-700 transition hover:border-neutral-400 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:border-neutral-500 dark:hover:bg-neutral-900"
                 >
-                  Show credential <ExternalLink className="h-4 w-4" />
+                  Show credential <ExternalLink className="h-3.5 w-3.5" />
                 </Link>
               )}
-            </div>
+            </article>
           ))}
         </div>
       </section>

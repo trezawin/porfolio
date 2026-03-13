@@ -147,7 +147,10 @@ export default function HomePage() {
       <div className="grid items-center gap-12 md:grid-cols-[1.15fr_0.85fr]">
         <motion.div initial={fadeUp.initial} animate={fadeUp.animate}>
           <span className="inline-flex items-center gap-2 rounded-full border border-neutral-200 px-3 py-1 text-xs font-medium text-neutral-600 dark:border-neutral-700 dark:text-neutral-300">
-            <MapPin className="h-3.5 w-3.5" /> {PROFILE.location}
+            <MapPin className="h-3.5 w-3.5" />
+            <span className="rounded-full bg-pink-100 px-2 py-0.5 font-semibold text-pink-700 dark:bg-pink-900/40 dark:text-pink-300">
+              {PROFILE.location}
+            </span>
           </span>
           <div className="mt-6 max-w-2xl space-y-4 text-sm text-neutral-600 dark:text-neutral-300 md:text-base">
             <h1 className="font-heading text-base tracking-tight text-neutral-900 dark:text-neutral-100 md:text-lg">

@@ -19,8 +19,9 @@ export const PROFILE = {
   email: "treza.win@gmail.com",
   blurb: `Hi there !
 Welcome to my page.
-I'm an engineer; data and AI enthusiast who loves turning ideas into substainable intelligent systems. After more than a decade building travel-tech solutions at Amadeus Airport IT, in 2024 I decided to deepen my data and analytics skills at ESCP Paris. 
-These days I'm exploring how data and AI can make technology smarter and more trustworthy like building LLM-powered tools for digital finance auditing. 
+I'm an engineer and data & AI enthusiast who loves building substainable and intelligent systems. The solutions that create real value for users and businesses, not just technically elegant systems.
+After more than a decade building travel-tech solutions at Amadeus Airport IT, in 2024 I decided to deepen my data and analytics skills at ESCP Paris. 
+These days I'm exploring how data and AI can make technology smarter and more trustworthy for example building LLM-powered tools for digital finance auditing. 
 I'm always curious, learning, and excited about what data can do next.`,
   introHighlights: [],
   languages: [
@@ -28,6 +29,7 @@ I'm always curious, learning, and excited about what data can do next.`,
     { name: "French", level: "A2" },
     { name: "Korean", level: "A2" },
     { name: "Burmese", level: "Native" },
+    { name: "Kachin", level: "Native" },
   ],
   headshot: "/profile-pic.jpeg",
   socials: [
@@ -319,12 +321,34 @@ export const EDUCATION = [
 
 export const CERTIFICATIONS = [
   {
+    title: "Generative AI in Business and in my Studies",
+    issuer: "ESCP Business School",
+    issued: "Dec 2025",
+    credentialId: "c534b414279fc4a246c3cef7919f547d17f7cd1e",
+    credentialUrl:
+      "https://openbadgefactory.com/obv3/credentials/c534b414279fc4a246c3cef7919f547d17f7cd1e.html",
+  },
+  {
     title: "IBM Data Science Professional Certificate",
     issuer: "IBM · Coursera",
     issued: "Sep 2025",
     credentialId: "OFSN8C654LX5",
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/professional-cert/OFSN8C654LX5",
+  },
+  {
+    title: "Python for Data Science, AI & Development",
+    issuer: "IBM · Coursera",
+    issued: "2025",
+    credentialId: "CHOWUIWFHK2U",
+    credentialUrl: "https://coursera.org/share/35677a21d999e7b355d09bed44b3511a",
+  },
+  {
+    title: "Machine Learning with Python",
+    issuer: "IBM · Coursera",
+    issued: "2025",
+    credentialId: "EY55Z56U2AJ8",
+    credentialUrl: "https://coursera.org/share/fdce8d491f690e4aa7df1ca2b2ea63ef",
   },
   {
     title: "Algorithmic Toolbox",
